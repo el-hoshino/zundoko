@@ -8,5 +8,6 @@
 
 import Foundation
 
-print("Hello, World!")
+let candidates = Array(CommandLine.arguments.dropFirst())
+var outputs: [String] = []
 
