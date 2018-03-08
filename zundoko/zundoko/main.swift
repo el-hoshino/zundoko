@@ -11,3 +11,16 @@ import Foundation
 let candidates = Array(CommandLine.arguments.dropFirst())
 var outputs: [String] = []
 
+output: while let random = candidates.random {
+	
+	print(random)
+	
+	outputs.append(random)
+	outputs.keepLast(candidates.count)
+	
+	if outputs == candidates {
+		print(outputs.joined(separator: " ").appending("!"))
+		break output
+	}
+	
+}
