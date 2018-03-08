@@ -16,4 +16,10 @@ extension Array {
 		return self[Int(randomIndex)]
 	}
 	
+	mutating func keepLast(_ n: Int = 1) {
+		guard self.count > n else { return }
+		let removingElementsCount = self.count - n
+		self.removeFirst(removingElementsCount)
+	}
+	
 }
